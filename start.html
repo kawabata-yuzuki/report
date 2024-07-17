@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズスタート</title>
+    <link rel="stylesheet" href="start.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>都道府県シルエットクイズへようこそ！</h1>
+        <p>高得点をめざして頑張りましょう！</p>
+        <p>スタートボタンを押すとクイズスタートです。</p>
+
+        <button id="start-button">スタート</button>
+    </div>
+    <script>
+        // ボタンクリックイベントを設定
+        document.getElementById('start-button').addEventListener('click', function() {
+            window.location.href = 'quiz.html'; // クイズ画面に移動する
+        });
+    </script>
+</body>
+</html>

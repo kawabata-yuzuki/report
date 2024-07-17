@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズ結果</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>クイズ結果</h1>
+        <p>あなたの正解数は <span id="final-correct-count">0</span> です。</p>
+        <p id="comment"></p>
+        <button id="retry-button">もう一度挑戦する</button>
+    </div>
+    <script>
+        // 得点を取得
+        const correctCount = localStorage.getItem('correctCount') || 0;
+        document.getElementById('final-correct-count').textContent = correctCount;
+
+        // コメントを表示
+        let comment = '';
+        if (correctCount < 1) {
+            comment = 'まだまだこれから頑張ろう！';
+        } else if (correctCount < 10) {
+            comment = '少しずつ分かってきているね。まだまだこれから頑張ろう！';
+        } else if (correctCount < 23) {
+            comment = '半分以上正解。この調子で頑張ろう！';
+        } else if (correctCount < 29) {
+            comment = '大分正解できました。この調子で頑張ろう！';    
+        } else if (correctCount < 37) {
+            comment = '都道府県マスター目指して頑張ろう！';
+        } else if (correctCount < 47) {
+            comment = '全問正解まであと少し...都道府県マスター目指して頑張ろう！';
+        } else {
+            comment = '全問正解、素晴らしい！あなたは都道府県マスターだ！';
+        }
+        document.getElementById('comment').textContent = comment;
+
+        // ボタンクリックイベントを設定
+        document.getElementById('retry-button').addEventListener('click', function() {
+            window.location.href = 'start.html'; // リトライ時にstart.htmlに移動する
+        });
+    </script>
+</body>
+</html>

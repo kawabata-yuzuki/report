@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>都道府県クイズ</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="question-container" class="question-container">
+            <h2 id="question">この都道府県はどこですか？</h2>
+            <img id="question-image" src="" alt="Question Image">
+            <input type="text" id="answer" placeholder="答えを入力してください">
+            <div id="hint" style="display: none;"></div>
+            <div id="result"></div>
+            <button id="check-answer-button" onclick="checkAnswer()">回答を確認</button>
+            <button id="hint-button" onclick="showHint()">ヒントを見る</button>
+            <button id="next-button" style="display: none;" onclick="nextQuiz()">次の問題</button>
+        </div>
+        <div id="current-question">1問目</div>
+        <div>正解数: <span id="correct-count">0</span></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    background-image: url('earth.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.quiz-container {
+    text-align: center;
+    background-color: #25ffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px; /* 固定幅を指定 */
+    height: 720px; /* 固定高さを指定 */
+    overflow: hidden; /* オーバーフローを隠す */
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+#question-image {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: calc(100% - 22px);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    width: 150px; /* 幅を固定 */
+    height: 50px; /* 高さを固定 */
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
